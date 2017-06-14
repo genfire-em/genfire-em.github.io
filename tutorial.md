@@ -126,6 +126,3 @@ Here you can view individual layers of your reconstruction (or any volume) along
 You can also use this module to view your calculated projections.
 
 Hopefully this tutorial has been helpful. Happy reconstructing!
-### Table of contents
-
-- [Tutorial](#tutorial)
