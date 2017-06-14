@@ -9,7 +9,7 @@
 - [Troubleshooting](#troubleshooting)
 ## Get the Source Code
 
-To install GENFIRE as a python package, first 
+To install `GENFIRE` as a python package, first 
 [download the source code](www.github.com/genfire-em). Then follow the procedure for 
 your operating system.
 
@@ -48,7 +48,7 @@ $ brew install sip
 $ brew install pyqt
 ~~~
 
-You should now have all the dependencies necessary to run GENFIRE. To install it, make
+You should now have all the dependencies necessary to run `GENFIRE`. To install it, make
 sure you are in the directory with setup.py and enter the follow. Again, you may need sudo
 
 ~~~
@@ -72,21 +72,21 @@ import GENFIRE
 GENFIRE.gui.launch.main()
 ~~~
 
-### (Optional) Turbo-charge GENFIRE with FFTW
+### (Optional) Turbo-charge `GENFIRE` with `FFTW`
 
-GENFIRE can make use of [pyFFTW](https://pypi.python.org/pypi/pyFFTW), which wraps the [FFTW](http://www.fftw.org/) library. I have tested a number of
-FFT routines including those in NumPy, SciPy, and pyFFTW, and found this to be the fastest one by a factor of 2-3.
+`GENFIRE` can make use of [`pyFFTW`](https://pypi.python.org/pypi/pyFFTW), which wraps the [`FFTW`](http://www.fftw.org/) library. I have tested a number of
+FFT routines including those in `NumPy`, `SciPy`, and `pyFFTW`, and found this to be the fastest one by a factor of 2-3.
 
-*The following are details for installing FFTW from source, but recently pip has begun to support precomiled libraries for the package, so you should first try the easy way with*
+*The following are details for installing `FFTW` from source, but recently pip has begun to support precomiled libraries for the package, so you should first try the easy way with*
 
 ~~~
 pip install pyfftw
 ~~~
 
-*if this fails, then proceed with building the FFTW libraries by hand and then reinvoking pip as described below*
+*if this fails, then proceed with building the `FFTW` libraries by hand and then reinvoking pip as described below*
 
-In order for GENFIRE to use pyFFTW you must install [the FFTW libraries](http://www.fftw.org/download.html). Download the source code, decompress it, and navigate into the unpacked directory
-from your terminal. PyFFTW needs FFTW to be compiled for all precision types, so you have to compile it three times.
+In order for `GENFIRE` to use `pyFFTW` you must install [the `FFTW` libraries](http://www.fftw.org/download.html). Download the source code, decompress it, and navigate into the unpacked directory
+from your terminal. `pyFFTW` needs `FFTW` to be compiled for all precision types, so you have to compile it three times.
 Use the following commands
 
 ~~~
@@ -116,13 +116,13 @@ $ python -c "import pyfftw"
 
 If you don't receive an error, then it was successful. If you get an error along the lines of
 "ImportError: libfftw3l.so cannot open shared object file" then you need to set your `DYLD_LIBRARY_PATH`
-environmental variable so that pyFFTW can find the libraries
+environmental variable so that `pyFFTW` can find the libraries
 
 ~~~
 $ export DYLD_LIBRARY_PATH=/usr/local/lib:$DYLD_LIBRARY_PATH<
 ~~~
 
-If the fftw .so files are somewhere other than /usr/local/lib, then you should replace that part appropriately.
+If the `FFTW` .so files are somewhere other than /usr/local/lib, then you should replace that part appropriately.
 To make this change permanent add the above line to the end of your ~/.bash_profile
 
 <a name = "linux"></a>
@@ -172,22 +172,22 @@ import GENFIRE<br>
 GENFIRE.gui.launch.main()
 ~~~
 
-### (Optional) Turbo-charge GENFIRE with FFTW
+### (Optional) Turbo-charge `GENFIRE` with `FFTW`
 
-GENFIRE can make use of [pyFFTW](https://pypi.python.org/pypi/pyFFTW), which wraps the [FFTW](www.fftw.org) library. I have tested a number of
-FFT routines including those in NumPy, SciPy, and pyFFTW, and found this to be the fastest one by a factor of 2-3.
+`GENFIRE` can make use of [`pyFFTW`](https://pypi.python.org/pypi/pyFFTW), which wraps the [`FFTW`](www.fftw.org) library. I have tested a number of
+FFT routines including those in `NumPy`, `SciPy`, and `pyFFTW`, and found this to be the fastest one by a factor of 2-3.
 
-*The following are details for installing FFTW from source, but recently pip has begun to support precomiled libraries for the package, so you should first try the easy way with*
+*The following are details for installing `FFTW` from source, but recently pip has begun to support precomiled libraries for the package, so you should first try the easy way with*
 
 ~~~
 pip install pyfftw
 ~~~
 
-*if this fails, then proceed with building the FFTW libraries by hand and then reinvoking pip as described below*
+*if this fails, then proceed with building the `FFTW` libraries by hand and then reinvoking pip as described below*
 
-In order for GENFIRE to use pyFFTW you must [install
-the FFTW libraries](http://www.fftw.org/download.html ). Download the source code, decompress it, and navigate into the unpacked directory
-from your terminal. PyFFTW needs FFTW to be compiled for all precision types, so you have to compile it three times.
+In order for `GENFIRE` to use `pyFFTW` you must [install
+the `FFTW` libraries](http://www.fftw.org/download.html ). Download the source code, decompress it, and navigate into the unpacked directory
+from your terminal. `pyFFTW` needs `FFTW` to be compiled for all precision types, so you have to compile it three times.
 Use the following commands
 
 ~~~
@@ -210,13 +210,13 @@ $ sudo make install
 
 If you don't receive an error, then it was successful. If you get an error along the lines of
 "ImportError: libfftw3l.so cannot open shared object file" then you need to set your `LD_LIBRARY_PATH`
-environmental variable so that pyFFTW can find the libraries
+environmental variable so that `pyFFTW` can find the libraries
 
 ~~~
 $ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH<
 ~~~
 
-If the fftw .so files are somewhere other than /usr/local/lib, then you should replace that part appropriately.
+If the `FFTW` .so files are somewhere other than /usr/local/lib, then you should replace that part appropriately.
 To make this change permanent add the above line to the end of your ~/.bashrc
 
 <a name="windows"></a>
@@ -224,7 +224,7 @@ To make this change permanent add the above line to the end of your ~/.bashrc
 ## Windows 10 
 
 For python3 on Windows 10 I would recommend using [Anaconda from Continuum Analytics](https://www.continuum.io/downloads). It's a distribution of python that contains
-most of the packages used by GENFIRE all wrapped into a simple-to-use installer.*Note you must use python 3.*
+most of the packages used by `GENFIRE` all wrapped into a simple-to-use installer.*Note you must use python3.*
 Once you have python setup, open up a cmd prompt and navigate to the source directory.
 That's the same folder as requirements.txt and setup.py
 
@@ -249,10 +249,10 @@ import GENFIRE
 GENFIRE.gui.launch.main()
 ~~~
 
-### (Optional) Turbo-charge GENFIRE with FFTW
+### (Optional) Turbo-charge `GENFIRE` with `FFTW`
 
-GENFIRE can make use of [pyFFTW](https://pypi.python.org/pypi/pyFFTW), which wraps the [FFTW](www.fftw.org) library. I have tested a number of
-FFT routines including those in NumPy, SciPy, and pyFFTW, and found this to be the fastest one by a factor of 2-3.
+`GENFIRE` can make use of [`pyFFTW`](https://pypi.python.org/pypi/pyFFTW), which wraps the [`FFTW`](www.fftw.org) library. I have tested a number of
+FFT routines including those in `NumPy`, `SciPy`, and `pyFFTW`, and found this to be the fastest one by a factor of 2-3.
 
 *The following are details for installing FFTW from source, but recently pip has begun to support precomiled libraries for the package, so you should first try the easy way with*
 
@@ -260,12 +260,12 @@ FFT routines including those in NumPy, SciPy, and pyFFTW, and found this to be t
 $ C:\path\to\Anaconda\Scripts\pip install pyfftw
 ~~~
 
-*if this fails, then consult the [FFTW documentation](www.fftw.org)*
+*if this fails, then consult the [`FFTW` documentation](www.fftw.org)*
 
 <a name=troubleshooting></a>
 
 ## Installation Troubleshooting
 
-If you have trouble installing PyQt4 or sip, consult their [documentation](http://pyqt.sourceforge.net/Docs/PyQt4/installation.html)
+If you have trouble installing `PyQt5` or `sip`, consult their [documentation](http://pyqt.sourceforge.net/Docs/PyQt4/installation.html)
 If you have some problem with the "pip install -r requirements.txt" step, you can view
 the requirements.txt file to see the packages that are necessary, and try to 		install them one-by-one.
