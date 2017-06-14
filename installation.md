@@ -20,6 +20,7 @@ To install GENFIRE as a python package, first
 your operating system.
 
 <a name = "mac"></a>
+
 ## Mac OS X
 
 Python is preinstalled on Mac OS X, but it is generally a bad idea to alter the system
@@ -131,4 +132,5 @@ If the fftw .so files are somewhere other than /usr/local/lib, then you should r
 To make this change permanent add the above line to the end of your ~/.bash_profile
 
 <a name = "linux"></a>
-##  Linux (Ubuntu 14.04)
+
+## Linux (Ubuntu 14.04)
