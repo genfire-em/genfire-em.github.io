@@ -19,7 +19,8 @@ To install GENFIRE as a python package, first
 [download the source code](www.github.com/genfire-em). Then follow the procedure for 
 your operating system.
 
-##<a name = "mac"></a> Mac OS X
+<a name = "mac"></a>
+## Mac OS X
 
 Python is preinstalled on Mac OS X, but it is generally a bad idea to alter the system
 python in /usr/bin as some programs depend on it. I would highly recommend using the
@@ -129,5 +130,5 @@ $ export DYLD_LIBRARY_PATH=/usr/local/lib:$DYLD_LIBRARY_PATH<
 If the fftw .so files are somewhere other than /usr/local/lib, then you should replace that part appropriately.
 To make this change permanent add the above line to the end of your ~/.bash_profile
 
-
-## <a name = "linux"></a> Linux (Ubuntu 14.04)
+<a name = "linux"></a>
+##  Linux (Ubuntu 14.04)
