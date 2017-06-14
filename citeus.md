@@ -7,7 +7,7 @@ J., Lo, Y.H., Melinte, G., Chiu, W., Rodriguez, J.A., Miao, J.:
 GENFIRE: A generalized Fourier iterative reconstruction
 algorithm for high-resolution 3D imaging. *submitted* (2017)
 
-You may also consider referencing the first published application of `GENFIRE`:
+	You may also consider referencing the first published application of `GENFIRE`:
 
 2. Yang, Y., Chen, C.-C., Scott, M., Ophus, C., Xu, R., Pryor, Jr.,
 A., Wu, L., Sun, F, Theis, W., Zhou, J., et al.:
