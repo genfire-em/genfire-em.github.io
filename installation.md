@@ -72,8 +72,8 @@ $ python3
 ~~~
 
 ~~~ python
-$ import GENFIRE
-$ GENFIRE.gui.launch.main()
+import GENFIRE
+GENFIRE.gui.launch.main()
 ~~~
 
 ### (Optional) Turbo-charge GENFIRE with FFTW
