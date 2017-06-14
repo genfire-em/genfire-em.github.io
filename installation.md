@@ -5,14 +5,8 @@
 - [Get the Source Code](#get-the-source-code)
 - [Mac OS X](#mac)
 - [Linux (Ubuntu)](#linux)
-- [Last important thing: YAML front matter ("parameters" for a page)](#last-important-thing-yaml-front-matter-parameters-for-a-page)
-- [Features](#features)
-- [Creating a User Page vs a Project Page](#creating-a-user-page-vs-a-project-page)
-- [Showcased users (success stories!)](#showcased-users-success-stories)
-- [Advanced: local development](#advanced-local-development-using-docker)
-- [Credits and contributions](#credits)
-
-
+- [Windows](#windows)
+- [Troubleshooting](#troubleshooting)
 ## Get the Source Code
 
 To install GENFIRE as a python package, first 
@@ -20,8 +14,6 @@ To install GENFIRE as a python package, first
 your operating system.
 
 <a name = "mac"></a>
-
-
 
 ## Mac OS X
 
@@ -91,7 +83,7 @@ FFT routines including those in NumPy, SciPy, and pyFFTW, and found this to be t
 pip install pyfftw
 ~~~
 
-*if this failes, then proceed with building the FFTW libraries by hand and then reinvoking pip as described below*
+*if this fails, then proceed with building the FFTW libraries by hand and then reinvoking pip as described below*
 
 In order for GENFIRE to use pyFFTW you must install [the FFTW libraries](http://www.fftw.org/download.html). Download the source code, decompress it, and navigate into the unpacked directory
 from your terminal. PyFFTW needs FFTW to be compiled for all precision types, so you have to compile it three times.
@@ -136,3 +128,144 @@ To make this change permanent add the above line to the end of your ~/.bash_prof
 <a name = "linux"></a>
 
 ## Linux (Ubuntu 14.04)
+
+Navigate to the source code directory. That's the same folder as requirements.txt and setup.py
+
+~~~
+$ cd /path/to/GENFIRE
+~~~
+
+Install (most of the) dependencies using pip
+
+~~~
+$ pip install --upgrade pip
+$ sudo pip install -r requirements.txt
+~~~
+
+You will also need sip and PyQt5 this command should install both.
+
+~~~
+$ sudo apt-get install python3-pyqt5
+~~~
+
+You should now have all the dependencies necessary to run GENFIRE. To install it, make
+sure you are in the directory with setup.py and enter
+
+~~~
+$ sudo python setup.py install
+~~~
+
+If everything worked, you can now launch the gui from the command line with
+
+~~~
+$ genfire
+~~~
+
+You can also use the code as any other python package. Here's an example of launching the gui from within python
+
+~~~
+$ python3
+~~~
+
+~~~ python
+import GENFIRE<br>
+GENFIRE.gui.launch.main()
+~~~
+
+### (Optional) Turbo-charge GENFIRE with FFTW
+
+GENFIRE can make use of [pyFFTW](https://pypi.python.org/pypi/pyFFTW), which wraps the [FFTW](www.fftw.org) library. I have tested a number of
+FFT routines including those in NumPy, SciPy, and pyFFTW, and found this to be the fastest one by a factor of 2-3.
+
+*The following are details for installing FFTW from source, but recently pip has begun to support precomiled libraries for the package, so you should first try the easy way with*
+
+~~~
+pip install pyfftw
+~~~
+
+*if this fails, then proceed with building the FFTW libraries by hand and then reinvoking pip as described below*
+
+In order for GENFIRE to use pyFFTW you must [install
+the FFTW libraries](http://www.fftw.org/download.html ). Download the source code, decompress it, and navigate into the unpacked directory
+from your terminal. PyFFTW needs FFTW to be compiled for all precision types, so you have to compile it three times.
+Use the following commands
+
+~~~
+$ ./configure --enable-threads --enable-shared
+$ make
+$ sudo make install
+~~~
+
+~~~
+$ ./configure --enable threads --enable-shared --enable-float
+$ make
+$ sudo make install
+~~~
+
+~~~
+$ ./configure --enable threads --enable-shared --enable-long-double
+$ make
+$ sudo make install
+~~~
+
+If you don't receive an error, then it was successful. If you get an error along the lines of
+"ImportError: libfftw3l.so cannot open shared object file" then you need to set your `LD_LIBRARY_PATH`
+environmental variable so that pyFFTW can find the libraries
+
+~~~
+$ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH<
+~~~
+
+If the fftw .so files are somewhere other than /usr/local/lib, then you should replace that part appropriately.
+To make this change permanent add the above line to the end of your ~/.bashrc
+
+<a name="windows"></a>
+
+## Windows 10 
+
+For python3 on Windows 10 I would recommend using [Anaconda from Continuum Analytics](https://www.continuum.io/downloads). It's a distribution of python that contains
+most of the packages used by GENFIRE all wrapped into a simple-to-use installer.*Note you must use python 3.*
+Once you have python setup, open up a cmd prompt and navigate to the source directory.
+That's the same folder as requirements.txt and setup.py
+
+~~~
+$ C:\path\to\Anaconda\python setup.py install
+~~~
+
+If everything worked you can now launch the gui.
+
+~~~
+$ C:\path\to\Anaconda\python GENFIRE\gui\launch.py
+~~~
+
+You can also use the code as any other python package. Here's an example of launching the gui from within python
+
+~~~
+$ C:\path\to\Anaconda\python3
+~~~
+
+~~~ python
+import GENFIRE
+GENFIRE.gui.launch.main()
+~~~
+
+### (Optional) Turbo-charge GENFIRE with FFTW
+
+GENFIRE can make use of [pyFFTW](https://pypi.python.org/pypi/pyFFTW), which wraps the [FFTW](www.fftw.org) library. I have tested a number of
+FFT routines including those in NumPy, SciPy, and pyFFTW, and found this to be the fastest one by a factor of 2-3.
+
+*The following are details for installing FFTW from source, but recently pip has begun to support precomiled libraries for the package, so you should first try the easy way with*
+
+~~~
+$ C:\path\to\Anaconda\Scripts\pip install pyfftw
+~~~
+
+*if this fails, then consult the [FFTW documentation](www.fftw.org)*
+
+<a name=troubleshooting></a>
+
+## Installation Troubleshooting
+
+If you have trouble installing PyQt4 or sip, consult their [documentation](http://pyqt.sourceforge.net/Docs/PyQt4/installation.html)
+If you have some problem with the "pip install -r requirements.txt" step, you can view
+the requirements.txt file to see the packages that are necessary, and try to 		install them one-by-one.
