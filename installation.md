@@ -21,6 +21,8 @@ your operating system.
 
 <a name = "mac"></a>
 
+
+
 ## Mac OS X
 
 Python is preinstalled on Mac OS X, but it is generally a bad idea to alter the system
