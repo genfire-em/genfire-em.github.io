@@ -1,4 +1,4 @@
-
+# About
 `GENFIRE`, for GENeralized Fourier Iterative REconstruction, is a software package implementing the algorithm of the same name for 3D image reconstruction from arbitrarily-oriented projection images. `GENFIRE` exists as both a Python implementation with a GUI programmed with `PyQt5` and as a bundle of `MATLAB` code.
 
 The following is the abstract from Pryor, Jr. *et al* (2017):

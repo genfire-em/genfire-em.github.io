@@ -1,3 +1,5 @@
+# Tutorial
+
 This tutorial will walk you through your first GENFIRE 3D reconstruction. You will 
 simulate a reconstruction of a tomographically-acquired tilt series using a vesicle model 
 with GENFIRE's GUI.

@@ -1,3 +1,4 @@
+# Referencing
 If you use GENFIRE in your research, we kindly ask that you cite the following paper:
 
 	1. Pryor, Jr., A., Yang, Y., Rana, A., Gallagher-Jones, M., Zhou,
