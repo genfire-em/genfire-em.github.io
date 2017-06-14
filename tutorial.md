@@ -48,16 +48,16 @@ Series from Model"
 From this dialog you can specify the Euler angles for each of the calculated projections. 
 To accomplish this you have two options.
 
-	1. Provide the Euler angles as a space-delimited .txt file where each 
-	row corresponds to one projection and provides the Euler angles as phi theta psi.
-	If you are confused about this format you can view the outputted file with option 2 to see an example.
-	Note there is no limitation on the angles for GENFINRE like there are in many single-axis tomography
-	reconstruction techniques, so you can use whatever you'd like.
+1. Provide the Euler angles as a space-delimited .txt file where each 
+row corresponds to one projection and provides the Euler angles as phi theta psi.
+If you are confused about this format you can view the outputted file with option 2 to see an example.
+Note there is no limitation on the angles for GENFINRE like there are in many single-axis tomography
+reconstruction techniques, so you can use whatever you'd like.
 
-	2. Specify a single-axis tilt series. Specify the tilt angle, theta, 
-	as start = 0, step = 2, stop = 180 to calculate 91 equally spaced projections with no missing wedge.
-	Choose an output filename for the projection, make sure "Save Angles" is checked, 
-	then click "Calculate Projections" to perform the calculation. 
+2. Specify a single-axis tilt series. Specify the tilt angle, theta, 
+as start = 0, step = 2, stop = 180 to calculate 91 equally spaced projections with no missing wedge.
+Choose an output filename for the projection, make sure "Save Angles" is checked, 
+then click "Calculate Projections" to perform the calculation. 
 
 
 ![Dialog to specify Euler angles -- ready](img/CalculateProjection_dialog_ready.png)
