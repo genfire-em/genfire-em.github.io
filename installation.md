@@ -262,7 +262,7 @@ $ C:\path\to\Anaconda\Scripts\pip install pyfftw
 
 *if this fails, then consult the [`FFTW` documentation](www.fftw.org)*
 
-<a name=troubleshooting></a>
+<a name="troubleshooting"></a>
 
 ## Installation Troubleshooting
 
