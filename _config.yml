@@ -23,6 +23,7 @@ description: GENeralized Fourier Iterative REconstruction
 
 # List of links in the navigation bar
 navbar-links:
+
   About: "about"
   Downloads: 
     - Python: "www.github.com/genfire-em/GENFIRE-Python"
