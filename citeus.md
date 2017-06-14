@@ -9,6 +9,7 @@ If you use GENFIRE in your research, we kindly ask that you cite the following p
 
 You may also consider referencing the first published application of `GENFIRE`:
 
-	Yang, Y., Chen, C.-C., Scott, M., Ophus, C., Xu, R., Pryor, Jr., A., Wu, L., Sun, F,
-	Theis, W., Zhou, J., et al.: Deciphering chemical order/disorder and material 
-	properties at the single-atom level. *Nature* **542** (7639), 75–79 (2017)
+	Yang, Y., Chen, C.-C., Scott, M., Ophus, C., Xu, R., Pryor, Jr.,
+	A., Wu, L., Sun, F, Theis, W., Zhou, J., et al.:
+	Deciphering chemical order/disorder and material properties
+	at the single-atom level. *Nature* **542** (7639), 75–79 (2017)
