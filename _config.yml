@@ -23,7 +23,8 @@ description: GENeralized Fourier Iterative REconstruction
 
 # List of links in the navigation bar
 navbar-links:
-  Download: 
+  About: "about"
+  Downloads: 
     - Python: "www.github.com/genfire-em/GENFIRE-Python"
     - MATLAB: "www.github.com/genfire-em/GENFIRE-MATLAB"
   Installation: "installation"
