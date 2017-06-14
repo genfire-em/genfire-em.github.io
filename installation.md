@@ -4,7 +4,7 @@
 
 - [Get the Source Code](#get-the-source-code)
 - [Mac OS X](#mac-os-x)
-- [Add your own content](#add-your-own-content)
+- [Linux (Ubuntu)](#linux)
 - [Last important thing: YAML front matter ("parameters" for a page)](#last-important-thing-yaml-front-matter-parameters-for-a-page)
 - [Features](#features)
 - [Creating a User Page vs a Project Page](#creating-a-user-page-vs-a-project-page)
@@ -81,11 +81,13 @@ GENFIRE.gui.launch.main()
 GENFIRE can make use of[pyFFTW](https://pypi.python.org/pypi/pyFFTW), which wraps the [FFTW](http://www.fftw.org/) library. I have tested a number of
 FFT routines including those in NumPy, SciPy, and pyFFTW, and found this to be the fastest one by a factor of 2-3.
 
-*The following are details for installing FFTW from source, but recently pip has begun to support the package, so you should first try the easy way with*
+*The following are details for installing FFTW from source, but recently pip has begun to support precomiled libraries for the package, so you should first try the easy way with*
 
 ~~~
 pip install pyfftw
 ~~~
+
+*if this failes, then proceed with building the FFTW libraries by hand and then reinvoking pip as described below*
 
 In order for GENFIRE to use pyFFTW you must install [the FFTW libraries](http://www.fftw.org/download.html). Download the source code, decompress it, and navigate into the unpacked directory
 from your terminal. PyFFTW needs FFTW to be compiled for all precision types, so you have to compile it three times.
@@ -96,3 +98,36 @@ $ ./configure --enable-threads --enable-shared
 $ make
 $ sudo make install
 ~~~
+
+~~~
+$ ./configure --enable threads --enable-shared --enable-float
+$ make
+$ sudo make install
+~~~
+
+~~~
+$ ./configure --enable threads --enable-shared --enable-long-double
+$ make
+$ sudo make install
+~~~
+
+Now, install pyFFTW with pip and and test that it worked
+
+~~~
+$ pip install pyfftw
+$ python -c "import pyfftw"
+~~~
+
+If you don't receive an error, then it was successful. If you get an error along the lines of
+"ImportError: libfftw3l.so cannot open shared object file" then you need to set your `DYLD_LIBRARY_PATH`
+environmental variable so that pyFFTW can find the libraries
+
+~~~
+$ export DYLD_LIBRARY_PATH=/usr/local/lib:$DYLD_LIBRARY_PATH<
+~~~
+
+If the fftw .so files are somewhere other than /usr/local/lib, then you should replace that part appropriately.
+To make this change permanent add the above line to the end of your ~/.bash_profile
+
+<a name = "linux"></a>
+## Linux (Ubuntu 14.04)
