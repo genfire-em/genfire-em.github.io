@@ -3,7 +3,7 @@
 ## Table of contents
 
 - [Get the Source Code](#get-the-source-code)
-- [Mac OS X](#mac-os-x)
+- [Mac OS X](#mac)
 - [Linux (Ubuntu)](#linux)
 - [Last important thing: YAML front matter ("parameters" for a page)](#last-important-thing-yaml-front-matter-parameters-for-a-page)
 - [Features](#features)
@@ -19,7 +19,7 @@ To install GENFIRE as a python package, first
 [download the source code](www.github.com/genfire-em). Then follow the procedure for 
 your operating system.
 
-## Mac OS X
+##<a name = "mac"></a> Mac OS X
 
 Python is preinstalled on Mac OS X, but it is generally a bad idea to alter the system
 python in /usr/bin as some programs depend on it. I would highly recommend using the
@@ -78,7 +78,7 @@ GENFIRE.gui.launch.main()
 
 ### (Optional) Turbo-charge GENFIRE with FFTW
 
-GENFIRE can make use of[pyFFTW](https://pypi.python.org/pypi/pyFFTW), which wraps the [FFTW](http://www.fftw.org/) library. I have tested a number of
+GENFIRE can make use of [pyFFTW](https://pypi.python.org/pypi/pyFFTW), which wraps the [FFTW](http://www.fftw.org/) library. I have tested a number of
 FFT routines including those in NumPy, SciPy, and pyFFTW, and found this to be the fastest one by a factor of 2-3.
 
 *The following are details for installing FFTW from source, but recently pip has begun to support precomiled libraries for the package, so you should first try the easy way with*
@@ -129,5 +129,5 @@ $ export DYLD_LIBRARY_PATH=/usr/local/lib:$DYLD_LIBRARY_PATH<
 If the fftw .so files are somewhere other than /usr/local/lib, then you should replace that part appropriately.
 To make this change permanent add the above line to the end of your ~/.bash_profile
 
-<a name = "linux"></a>
-## Linux (Ubuntu 14.04)
+
+## <a name = "linux"></a> Linux (Ubuntu 14.04)
