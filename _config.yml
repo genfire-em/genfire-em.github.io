@@ -26,8 +26,8 @@ navbar-links:
 
   About: "about"
   Downloads: 
-    - Python: "www.github.com/genfire-em/GENFIRE-Python"
-    - MATLAB: "www.github.com/genfire-em/GENFIRE-MATLAB"
+    - Python: "http://www.github.com/genfire-em/GENFIRE-Python"
+    - MATLAB: "http://www.github.com/genfire-em/GENFIRE-MATLAB"
   Installation: "installation"
   Tutorials: "tutorial"
   Citing GENFIRE: "citeus"
