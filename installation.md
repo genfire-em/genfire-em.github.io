@@ -10,7 +10,7 @@
 ## Get the Source Code
 
 To install `GENFIRE` as a python package, first 
-[download the source code](www.github.com/genfire-em). Then follow the procedure for 
+[download the source code](http://www.github.com/genfire-em). Then follow the procedure for 
 your operating system.
 
 <a name = "mac"></a>
