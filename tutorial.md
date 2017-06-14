@@ -10,7 +10,7 @@ First thing's first -- open the GUI. It looks like this
 
 ### Table of contents
 
-- [Prerequisites](#prerequisites)
+- [Prerequisites](#GENFIRE-Tutorial)
 
 ## Prerequisites
 
