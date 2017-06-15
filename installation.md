@@ -102,7 +102,7 @@ $ sudo make install
 ~~~
 
 ~~~
-$ ./configure --enable threads --enable-shared --enable-long-double
+$ ./configure --enable-threads --enable-shared --enable-long-double
 $ make
 $ sudo make install
 ~~~
@@ -197,7 +197,7 @@ $ sudo make install
 ~~~
 
 ~~~
-$ ./configure --enable threads --enable-shared --enable-float
+$ ./configure --enable-threads --enable-shared --enable-float
 $ make
 $ sudo make install
 ~~~
