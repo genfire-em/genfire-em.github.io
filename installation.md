@@ -8,12 +8,33 @@
 	- [Linux (Ubuntu)](#linux)
 	- [Windows](#windows)
 	- [Troubleshooting](#troubleshooting)
-	
+
 <a name = "installpip"></a>
 ## Installing with pip
 
+`GENFIRE` is hosted on [PyPi](https://pypi.python.org/pypi), and thus can be easily installed with `pip`:
+
+~~~
+pip install genfire
+~~~
+
+You may need root privileges (sudo), depending on your environment. If this `pip` installation is successful, on Mac/Linux you can now open the GUI by running the launch.py script inside of the package
+
+~~~
+python3 /path/to/genfire/gui/launch.py
+~~~
+
+Alternatively, on Mac/Linux you should have access to the shortcut `genfire` which does the same thing
+
+~~~
+genfire
+~~~
+
+
 <a name = "installsetup"></a>
 ## Installing with setup.py
+
+If installing with `pip` fails, you can also try installing the package manually
 
 ### Get the Source Code
 
