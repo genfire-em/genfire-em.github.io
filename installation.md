@@ -24,7 +24,7 @@ You may need root privileges (sudo), depending on your environment. If this `pip
 python3 /path/to/genfire/gui/launch.py
 ~~~
 
-Alternatively, on Mac/Linux you should have access to the shortcut `genfire` which does the same thing
+Alternatively, on Mac/Linux you should have access to the shortcut `genfire` which does the same thing *(If anybody knows a reliable way to create a similar, installable shortcut command on Windows, I would love to hear about it)*
 
 ~~~
 genfire
