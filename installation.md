@@ -18,7 +18,7 @@
 pip install genfire
 ~~~
 
-You may need root privileges (sudo), depending on your environment. If this `pip` installation is successful, on Mac/Linux you can now open the GUI by running the launch.py script inside of the package
+You may need root privileges (sudo), depending on your environment. If this `pip` installation is successful, you can now open the GUI by running the launch.py script inside of the package
 
 ~~~
 python3 /path/to/genfire/gui/launch.py
