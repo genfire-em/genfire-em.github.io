@@ -1,13 +1,21 @@
 # Installation
 
 ## Table of contents
+- [Installing with pip](#installpip)
+- [Installing with setup.py](#installsetup)
+	- [Get the Source Code](#get-the-source-code)
+	- [Mac OS X](#mac)
+	- [Linux (Ubuntu)](#linux)
+	- [Windows](#windows)
+	- [Troubleshooting](#troubleshooting)
+	
+<a name = "installpip"></a>
+## Installing with pip
 
-- [Get the Source Code](#get-the-source-code)
-- [Mac OS X](#mac)
-- [Linux (Ubuntu)](#linux)
-- [Windows](#windows)
-- [Troubleshooting](#troubleshooting)
-## Get the Source Code
+<a name = "installsetup"></a>
+## Installing with setup.py
+
+### Get the Source Code
 
 To install `GENFIRE` as a python package, first 
 [download the source code](http://www.github.com/genfire-em). Then follow the procedure for 
@@ -15,7 +23,7 @@ your operating system.
 
 <a name = "mac"></a>
 
-## Mac OS X
+### Mac OS X
 
 Python is preinstalled on Mac OS X, but it is generally a bad idea to alter the system
 python in /usr/bin as some programs depend on it. I would highly recommend using the
@@ -72,7 +80,7 @@ import GENFIRE
 GENFIRE.gui.launch.main()
 ~~~
 
-### (Optional) Turbo-charge `GENFIRE` with `FFTW`
+#### (Optional) Turbo-charge `GENFIRE` with `FFTW`
 
 `GENFIRE` can make use of [`pyFFTW`](https://pypi.python.org/pypi/pyFFTW), which wraps the [`FFTW`](http://www.fftw.org/) library. I have tested a number of
 FFT routines including those in `NumPy`, `SciPy`, and `pyFFTW`, and found this to be the fastest one by a factor of 2-3.
@@ -127,7 +135,7 @@ To make this change permanent add the above line to the end of your ~/.bash_prof
 
 <a name = "linux"></a>
 
-## Linux (Ubuntu 14.04)
+### Linux (Ubuntu 14.04)
 
 Navigate to the source code directory. That's the same folder as requirements.txt and setup.py
 
@@ -172,7 +180,7 @@ import GENFIRE<br>
 GENFIRE.gui.launch.main()
 ~~~
 
-### (Optional) Turbo-charge `GENFIRE` with `FFTW`
+#### (Optional) Turbo-charge `GENFIRE` with `FFTW`
 
 `GENFIRE` can make use of [`pyFFTW`](https://pypi.python.org/pypi/pyFFTW), which wraps the [`FFTW`](www.fftw.org) library. I have tested a number of
 FFT routines including those in `NumPy`, `SciPy`, and `pyFFTW`, and found this to be the fastest one by a factor of 2-3.
@@ -221,7 +229,7 @@ To make this change permanent add the above line to the end of your ~/.bashrc
 
 <a name="windows"></a>
 
-## Windows 10 
+### Windows 10 
 
 For python3 on Windows 10 I would recommend using [Anaconda from Continuum Analytics](https://www.continuum.io/downloads). It's a distribution of python that contains
 most of the packages used by `GENFIRE` all wrapped into a simple-to-use installer.*Note you must use python3.*
@@ -249,7 +257,7 @@ import GENFIRE
 GENFIRE.gui.launch.main()
 ~~~
 
-### (Optional) Turbo-charge `GENFIRE` with `FFTW`
+#### (Optional) Turbo-charge `GENFIRE` with `FFTW`
 
 `GENFIRE` can make use of [`pyFFTW`](https://pypi.python.org/pypi/pyFFTW), which wraps the [`FFTW`](www.fftw.org) library. I have tested a number of
 FFT routines including those in `NumPy`, `SciPy`, and `pyFFTW`, and found this to be the fastest one by a factor of 2-3.
