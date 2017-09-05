@@ -1,10 +1,10 @@
 # Referencing
 If you use GENFIRE in your research, we kindly ask that you cite the following paper:
 
-	1. *Pryor, Jr., A.*, Yang, Y., Rana, A., Gallagher-Jones, M., Zhou,
+	1. Pryor, Jr., A., Yang, Y., Rana, A., Gallagher-Jones, M., Zhou,
 	J., Lo, Y.H., Melinte, G., Chiu, W., Rodriguez, J.A., Miao, J.:
 	GENFIRE: A generalized Fourier iterative reconstruction  
-	algorithm for high-resolution 3D imaging. Sci. Rep. 7, (2017) [free-access version](https://arxiv.org/abs/1706.04309)
+	algorithm for high-resolution 3D imaging. Sci. Rep. 7, (2017) free-access version: https://arxiv.org/abs/1706.04309
 
 You may also consider referencing the first published application of `GENFIRE`:
 
