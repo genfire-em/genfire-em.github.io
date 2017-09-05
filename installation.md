@@ -257,7 +257,7 @@ To make this change permanent add the above line to the end of your ~/.bashrc
 ### Windows 10 
 
 For python3 on Windows 10 I would recommend using [Anaconda from Continuum Analytics](https://www.continuum.io/downloads). It's a distribution of python that contains
-most of the packages used by `GENFIRE` all wrapped into a simple-to-use installer.*Note you must use python3.*
+most of the packages used by `GENFIRE` all wrapped into a simple-to-use installer. *Note you must use python3.*
 Once you have python setup, open up a cmd prompt and navigate to the source directory.
 That's the same folder as requirements.txt and setup.py
 
