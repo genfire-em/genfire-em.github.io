@@ -262,7 +262,7 @@ Once you have python setup, open up a cmd prompt and navigate to the source dire
 That's the same folder as requirements.txt and setup.py
 
 ~~~
-$ C:\path\to\Anaconda\python setup.py install
+$ C:\path\to\Anaconda\python3 setup.py install
 ~~~
 
 If everything worked you can now launch the gui.
