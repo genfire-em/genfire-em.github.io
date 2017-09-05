@@ -1,7 +1,7 @@
 # Installation
 
 ## Table of contents
-- [Installing with pip](#installpip)
+- [Installing with pip (easiest)](#installpip)
 - [Installing with setup.py](#installsetup)
 	- [Get the Source Code](#get-the-source-code)
 	- [Mac OS X](#mac)
@@ -15,7 +15,7 @@
 `GENFIRE` is hosted on [PyPi](https://pypi.python.org/pypi), and thus can be easily installed with `pip`:
 
 ~~~
-pip install genfire
+pip3 install genfire
 ~~~
 
 You may need root privileges (sudo), depending on your environment. If this `pip` installation is successful, you can now open the GUI by running the launch.py script inside of the package
@@ -29,6 +29,10 @@ Alternatively, on Mac/Linux you should have access to the shortcut `genfire` whi
 ~~~
 genfire
 ~~~
+
+#### Troubleshooting pip
+
+If an error occurs when using `pip` to install the dependencies for GENFIRE, you may try manually installing that dependency with `pip` and then trying to install GENFIRE. For example, if you receive an error about PyQt5 not being installed, try manually installing it with `pip install PyQt5`. If this still fails, you can try instead installing with setup.py, as described below.
 
 
 <a name = "installsetup"></a>
@@ -66,7 +70,7 @@ $ cd /path/to/GENFIRE
 Install (most of the) dependencies using pip3, you may need to prepend the command with sudo depending on your system
 
 ~~~
-$ pip install --upgrade pip
+$ pip3 install --upgrade pip
 $ pip3 install -r requirements.txt
 ~~~
 
@@ -109,7 +113,7 @@ FFT routines including those in `NumPy`, `SciPy`, and `pyFFTW`, and found this t
 *The following are details for installing `FFTW` from source, but recently pip has begun to support precomiled libraries for the package, so you should first try the easy way with*
 
 ~~~
-pip install pyfftw
+pip3 install pyfftw
 ~~~
 
 *if this fails, then proceed with building the `FFTW` libraries by hand and then reinvoking pip as described below*
@@ -139,7 +143,7 @@ $ sudo make install
 Now, install pyFFTW with pip and and test that it worked
 
 ~~~
-$ pip install pyfftw
+$ pip3 install pyfftw
 $ python -c "import pyfftw"
 ~~~
 
@@ -167,8 +171,8 @@ $ cd /path/to/GENFIRE
 Install (most of the) dependencies using pip
 
 ~~~
-$ pip install --upgrade pip
-$ sudo pip install -r requirements.txt
+$ pip3 install --upgrade pip
+$ sudo pip3 install -r requirements.txt
 ~~~
 
 You will also need sip and PyQt5 this command should install both.
@@ -209,7 +213,7 @@ FFT routines including those in `NumPy`, `SciPy`, and `pyFFTW`, and found this t
 *The following are details for installing `FFTW` from source, but recently pip has begun to support precomiled libraries for the package, so you should first try the easy way with*
 
 ~~~
-pip install pyfftw
+pip3 install pyfftw
 ~~~
 
 *if this fails, then proceed with building the `FFTW` libraries by hand and then reinvoking pip as described below*
@@ -286,7 +290,7 @@ FFT routines including those in `NumPy`, `SciPy`, and `pyFFTW`, and found this t
 *The following are details for installing FFTW from source, but recently pip has begun to support precomiled libraries for the package, so you should first try the easy way with*
 
 ~~~
-$ C:\path\to\Anaconda\Scripts\pip install pyfftw
+$ C:\path\to\Anaconda\Scripts\pip3 install pyfftw
 ~~~
 
 *if this fails, then consult the [`FFTW` documentation](www.fftw.org)*
@@ -296,5 +300,5 @@ $ C:\path\to\Anaconda\Scripts\pip install pyfftw
 ## Installation Troubleshooting
 
 If you have trouble installing `PyQt5` or `sip`, consult their [documentation](http://pyqt.sourceforge.net/Docs/PyQt4/installation.html)
-If you have some problem with the "pip install -r requirements.txt" step, you can view
+If you have some problem with the "pip3 install -r requirements.txt" step, you can view
 the requirements.txt file to see the packages that are necessary, and try to 		install them one-by-one.
