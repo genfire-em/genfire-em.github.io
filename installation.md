@@ -265,7 +265,7 @@ That's the same folder as requirements.txt and setup.py
 $ C:\path\to\Anaconda\python3 setup.py install
 ~~~
 
-If everything worked you can now launch the gui.
+If everything worked you can now launch the gui.oo
 
 ~~~
 $ C:\path\to\Anaconda\python GENFIRE\gui\launch.py

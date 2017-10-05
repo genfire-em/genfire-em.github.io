@@ -79,7 +79,7 @@ by clicking the enormous green button.
 
 Congratulations, you have completed your first GENFIRE reconstruction! You can now view 
 the error curves and a simple visualization of the results by clicking "Summarize Results"
-and selecting the file with your results.
+and selecting the file corresponding to "Results Filename". This file contains the reconstruction volume, and there are also some .txt files that are generated with a common root name. These .txt files contain the error curves for the reciprocal error and Rfree. Specifically, if your resulting reconstruction is stored in "results.mrc" then "results_errK.txt" contains the reciprocal space error vs iteration number, "results_Rfree_total.txt" contains the value of Rfree across all withheld datapoints for each iteration, and "results_Rfree_bybin.txt" subdivides the values of Rfree into 1-pixel thick bins and thus is a 2D array representing the value of Rfree in each bin for each iteration.
 
 ![Summary of results](img/summarize_results.png)
 
