@@ -65,7 +65,7 @@ then click "Calculate Projections" to perform the calculation.
 The calculation runs in the background on a separate thread. Once it is finished you will hopefully see
 a success message like this
 
-![GENFIRE GUI ready to reconstruct(img/gui_ready.png)
+![GENFIRE GUI ready to reconstruct](img/gui_ready.png)
 
 Note that the file created containing the Euler angles is the same name as the corresponding
 projections with "_euler_angles" appended, in case you want an example of how to format
