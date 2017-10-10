@@ -1,6 +1,16 @@
 # About
 `GENFIRE`, for GENeralized Fourier Iterative REconstruction, is a software package implementing the algorithm of the same name for 3D image reconstruction from arbitrarily-oriented projection images. `GENFIRE` exists as both a Python implementation with a GUI programmed with `PyQt5` and as a bundle of `MATLAB` code.
 
-The following is the abstract from Pryor, Jr. *et al* (2017):
+## File formats / conventions
 
->Tomography has made a radical impact on diverse fields ranging from the study of 3D atomic arrangements in matter to the study of human health in medicine. Despite its very diverse applications, the core of tomography remains the same, that is, a mathematical method must be implemented to reconstruct the 3D structure of an object from a number of 2D projections. In many scientific applications, however, the number of projections that can be measured is limited due to geometric constraints, tolerable radiation dose and/or acquisition speed. Thus it becomes an important problem to obtain the best-possible reconstruction from a limited number of projections. Here, we present the mathematical implementation of a tomographic algorithm, termed GENeralized Fourier Iterative REconstruction (GENFIRE). By iterating between real and reciprocal space, GENFIRE searches for a global solution that is concurrently consistent with the measured data and general physical constraints. The algorithm requires minimal human intervention and also incorporates angular refinement to reduce the tilt angle error. We demonstrate that GENFIRE can produce superior results relative to several other popular tomographic reconstruction techniques by numerical simulations, and by experimentally by reconstructing the 3D structure of a porous material and a frozen-hydrated marine cyanobacterium. Equipped with a graphical user interface, GENFIRE is freely available from our website and is expected to find broad applications across different disciplines.
+The Euler angle convention used by GENFIRE corresponds to that established by Heymann, Chagoyen and Belnap (2005). Each Euler angle triplet is expressed as (phi, theta, psi) where:
+
+	- phi is a rotation about the z axis
+	- theta is a rotation about the y' axis
+	- psi is a rotation about the z'' axis
+
+This Euler angle data should be provided as a 2D array of dimension num_projections x 3 with one row per projection. This may be either a .npy, .mat, or .txt file delimited in a way that it can be read by default with `numpy.loadtxt` (space-delimited works).
+
+The projection data should be a 3D volume of size N x N x num_projections containing floating-point precision data. N should be an even number, and currently must be the same for both the X and Y dimensions of the projections.
+
+The location of the rotational center is defined to be at pixel N/2 with 0-based indexing as in Python. In MATLAB, which uses 1-based indexing, this pixel corresponds to (N/2 + 1).
