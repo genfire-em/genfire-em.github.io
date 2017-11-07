@@ -14,3 +14,25 @@ This Euler angle data should be provided as a 2D array of dimension num_projecti
 The projection data should be a 3D volume of size N x N x num_projections containing floating-point precision data. N should be an even number, and currently must be the same for both the X and Y dimensions of the projections.
 
 The location of the rotational center is defined to be at pixel N/2 with 0-based indexing as in Python. In MATLAB, which uses 1-based indexing, this pixel corresponds to (N/2 + 1).
+
+## Running reconstructions with Python
+
+GENFIRE reconstructions may be run from within the `genfire` Python package through use of the `GenfireReconstructor` class. Simply instantiate a `GenfireReconstructor` with the desired reconstruction parameters and then invoke the `reconstruct` method. The reconstruction volume and associated error curves may then be saved using the helper function `gf.fileio.saveResults`. A simple example follows:
+
+~~~ python
+import genfire as gf
+
+pars = dict(
+	projectionFilename = "./data/projections.mat",
+	angleFilename = "./data/angles.mat",
+	supportFilename = "./data/support.mat",
+	resultsFilename = "recon.mrc",
+	numIterations=50,
+	)
+
+GF = gf.reconstruct.GenfireReconstructor(**pars)
+results = GF.reconstruct()
+gf.fileio.saveResults(results, GF.params.resultsFilename)
+~~~
+
+The full list of possible options and their associated default values may be viewed with `help gf.reconstruct.GenfireReconstructor`.
